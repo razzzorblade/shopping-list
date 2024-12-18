@@ -30,6 +30,8 @@ function onAddItemSubmit(e) {
     removeItemFromStorage(itemToEdit.textContent);
     itemToEdit.classList.remove('edit-mode');
     itemToEdit.remove();
+    formBtn.innerHTML = '<i class="fa-solid fa-plus"></i> Add Item';
+    formBtn.style.backgroundColor = 'black';
     isEditMode = false;
   } else {
     if (checkIfItemExists(newItem)) {
@@ -183,6 +185,8 @@ function checkUI() {
   if (items.length === 0) {
     clearBtn.style.display = 'none';
     itemFilter.style.display = 'none';
+    formBtn.innerHTML = '<i class="fa-solid fa-plus"></i> Add Item';
+    formBtn.style.backgroundColor = 'black';
   } else {
     clearBtn.style.display = 'block';
     itemFilter.style.display = 'block';
