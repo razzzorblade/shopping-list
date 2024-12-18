@@ -180,6 +180,7 @@ function filterItems(e) {
 
 function checkUI() {
   itemInput.value = '';
+  itemFilter.value = '';
 
   const items = itemList.querySelectorAll('li'); // have to define it inside function so as it checks every time the function runs
   if (items.length === 0) {
